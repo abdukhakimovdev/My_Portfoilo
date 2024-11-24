@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #232526, #98cbff);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Card Styles */
+  .smartwatch-card {
+    background: linear-gradient(145deg, #1e1e1e, #2b2b2b);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .smartwatch-logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px;
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  /* Info Section */
+  .smartwatch-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .smartwatch-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+  
+  /* Features Section */
+  .features {
+    margin-bottom: 20px;
+  }
+  
+  .features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4caf50;
+  }
+  
+  .features ul {
+    list-style: none;
+  }
+  
+  .features li {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .features li::before {
+    margin-right: 10px;
+    color: #4caf50;
+  }
+  
+  /* Price Section */
+  .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4caf50;
+    margin: 20px 0;
+  }
+  /* Buy Button */
+  .buy-now {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    border-radius: 30px;
+    text-decoration: none;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .smartwatch-card {
+      padding: 20px;
+    }
+  
+    .smartwatch-info h1 {
+      font-size: 1.5rem;
+    }
+  
+    .features h2 {
+      font-size: 1.2rem;
+    }
+  
+    .price {
+      font-size: 1.5rem;
+    }
+  }
+  

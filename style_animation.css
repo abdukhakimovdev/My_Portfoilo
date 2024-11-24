@@ -1,0 +1,107 @@
+     /* Telefon ramkasi */
+     .phone-suhbat {
+        width: 200px;
+        height: 400px;
+        background-color: #e0e0e0;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+        animation: shake 0.8s infinite ease-in-out; /*Telefon ramkasiga titroq animatsiyasi qo'shilgan (shake nomli animatsiya har 0.8 sekundda amalga oshadi).*/
+    }
+
+    /* Ichki ekran */
+    .phone-ekrani {
+        width: 170px;
+        height: 370px;
+        background-color: black;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+       
+    }
+
+    /* Pulsatsiyalanuvchi katta halqa */
+    .halqa {
+        width: 100px;
+        height: 100px;
+        border: 3px solid green;
+        border-radius: 50%;
+        position: absolute;
+        animation: pulse 1.5s infinite ease-in-out;  /*Halqa pulsatsiyalanadi (pulse nomli animatsiya 1.5 sekundlik sikl bilan ishlaydi).*/
+    }
+
+    /* Matn */
+    .qongiroq-matni {
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); /* Matn ekranning markazida joylashadi.*/
+    }
+
+    /* Yashil tugma */
+    .green-button {
+        width: 40px;
+        height: 40px;
+        background-color: green;
+        border-radius: 50%;
+        position: absolute; /*Tugmalar ekranning pastki qismiga joylashtiriladi (yashil tugma chap tomonda, qizil tugma o'ng tomonda).*/
+        bottom: 20px;
+        left: 40px;
+        animation: shake 0.8s infinite ease-in-out; /*Ikkala tugma ham titroq animatsiyasiga ega, lekin qizil tugma animatsiyasi teskari ishlaydi (titroq effektini kuchaytirish uchun).*/
+    }
+    i{
+        color: white;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+
+    /* Qizil tugma */
+    .red-button {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        animation: shake 0.8s infinite ease-in-out reverse;
+    }
+
+    /* Pulsatsiya animatsiyasi */
+    @keyframes pulse {
+        0% {
+            transform: scale(1); /* Halqaning boshlang'ich va tugash nuqtasi, odatdagi ko'rinishda. */
+        }
+        50% {
+            transform: scale(1.3);  /*Halqa 1.3 baravar kattalashadi va yarim shaffof holatga o'tadi.*/
+            opacity: 0.5;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Titroq animatsiyasi */
+    @keyframes shake {
+        0%, 100% {
+            transform: translateX(0); /*Element chapga 2px siljiydi*/
+        }
+        25% {
+            transform: translateX(-2px); /*Element chapga 2px siljiydi.*/
+        }
+        50% {
+            transform: translateX(2px); /* Element o'ngga 2px siljiydi.*/
+        }
+        75% {
+            transform: translateX(-2px);
+        }
+    }
